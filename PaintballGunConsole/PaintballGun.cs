@@ -9,5 +9,7 @@ namespace PaintballGunConsole
     internal class PaintballGun
     {
         public const int MAGAZINE_SIZE = 16;
+
+        private
     }
 }
