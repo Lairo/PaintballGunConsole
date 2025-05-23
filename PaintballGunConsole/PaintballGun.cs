@@ -27,6 +27,14 @@ namespace PaintballGunConsole
                 ballsLoaded = balls;
         }
 
+        public void Reload()
+        {
+            if (balls > MAGAZINE_SIZE)
+                ballsLoaded = MAGAZINE_SIZE;
+            else
+                ballsLoaded = balls;
+        }
+
         public bool Shoot()
         {
             if (ballsLoaded == 0) return false;
