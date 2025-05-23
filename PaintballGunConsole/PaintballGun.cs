@@ -17,14 +17,13 @@ namespace PaintballGunConsole
 
         public bool IsEmpty() { return ballsLoaded == 0; }
 
-        public int GetBalls() { return balls; }
-
-        public void SetBalls(int numberOfBalls)
+       public int Balls
         {
-            if (numberOfBalls > 0)
-                balls = numberOfBalls;
-            else
-                ballsLoaded = balls;
+            get { return balls; }
+            set { if (value > 0)
+                    balls = value;
+                Reload();
+            }
         }
 
         public void Reload()
